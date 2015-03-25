@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 23, 2015 2:26:48 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="demo.spring.model.User" optimistic-lock="version" schema="APP" table="USERS">
+    <id name="id" type="int">
+      <column name="ID" precision="5" scale="0"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="firstName" type="string">
+      <column length="50" name="FIRST_NAME" not-null="true"/>
+    </property>
+    <property name="lastName" type="java.lang.Integer">
+      <column name="LAST_NAME" precision="5" scale="0"/>
+    </property>
+    <property name="loginId" type="string">
+      <column length="16" name="LOGIN_ID"/>
+    </property>
+     <property name="password" type="string">
+      <column length="50" name="PASSWORD" not-null="true"/>
+    </property>
+  </class>
+</hibernate-mapping>
