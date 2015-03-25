@@ -6,7 +6,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1258">
         <title>Welcome to Spring Web MVC project</title>
       
-        <script type="text/javascript" src="./resources/twitter-bootstrap/fonts/jquery/jquery.js"></script>
+        <script type="text/javascript" src="<c:url value="/resources/twitter-bootstrap/fonts/jquery/jquery.js"/>"></script>
           <link type="text/css" rel="stylesheet" href="./resources/twitter-bootstrap/fonts/twitter-bootstrap/css/bootstrap.css"></link>
          <script type="text/javascript" src="./resources/twitter-bootstrap/fonts/twitter-bootstrap/js/bootstrap.js"></script>
         
@@ -16,11 +16,11 @@
     <container>
         
         <h1>Please Login!</h1>
-       <c:if test="${not empty error} ">
-			<div>${error}ss</div>
+       <c:if test="${not empty error}">
+			<div>${error}</div>
 		</c:if>
-                 <c:if test="${not empty logout} ">
-			<div class="error">${logout}loedout</div>
+                 <c:if test="${not empty logout}">
+			<div class="error">${logout}logout</div>
 		</c:if>
 		<c:if test="${not empty msg}">
 			<div class="error">${msg}</div>

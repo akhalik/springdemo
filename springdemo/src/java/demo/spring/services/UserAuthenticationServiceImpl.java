@@ -36,8 +36,14 @@ public class UserAuthenticationServiceImpl implements UserDetailsService {
                 "ROLE_ADMIN");
         authorities.add(adminAuthority);
         authorities.add(adminAuthority);
-        UserDetails userDetail = new org.springframework.security.core.userdetails.User(user.getLoginId(), user.getPassword(),
+        UserDetails userDetail = null;
+        if(user != null){
+        userDetail = new org.springframework.security.core.userdetails.User(user.getLoginId(), user.getPassword(),
                 true, true, true, true, authorities);
+        }else{
+         userDetail = new org.springframework.security.core.userdetails.User(" ", " ",
+                true, true, true, true, authorities);
+        }
 
         return userDetail;
     }

@@ -74,7 +74,7 @@ import org.springframework.beans.factory.annotation.Autowired;
                 Query hqlQuery =currentSession().createQuery( "From "+objectName + " where  " + attribName +" = '"+val+"'");
                   List<E> list =hqlQuery.list();
                 currentSession().getTransaction().commit();
-	        if(list != null ){
+	        if(list != null && (!list.isEmpty()) ){
                 
                     return list.get(0);
                 }else{
