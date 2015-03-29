@@ -15,6 +15,7 @@
                 authentication-failure-url="/LoginPage.action?error"
                 />
                 <logout invalidate-session="true" logout-success-url="/LoginPage.action?logout"></logout>
+                <session-management invalid-session-url="/LoginPage.action?sessionexpired"></session-management>
                 <!--enable csrf protection-->
                 <csrf/>                   
                 
